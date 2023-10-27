@@ -1,9 +1,10 @@
-let cart = [];
-let cartTotal = 0;
-
 function hello(){
     alert("Hello!");
 }
+
+/*
+let cart = [];
+let cartTotal = 0;
 
 function addToCart(productId) {
     // In a real application, you would need to implement product addition logic here.
@@ -39,3 +40,4 @@ function updateCartDisplay() {
     cartItems.innerHTML = "New Item!";
     cartTotalElement.textContent = cartTotal.toFixed(2);
 }
+*/

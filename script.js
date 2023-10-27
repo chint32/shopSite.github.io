@@ -1,6 +1,10 @@
 let cart = [];
 let cartTotal = 0;
 
+function hello() {
+    alert('Hello');
+}
+
 function addToCart(productId) {
     alert('Yup, its working =]');
     

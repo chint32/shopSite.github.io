@@ -6,6 +6,11 @@ body, h1, h2, h3, p, ul, li {
 
 body {
     font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    min-height: 100vh;
 }
 
 header {
@@ -22,7 +27,7 @@ header h1 {
 
 nav ul {
     list-style: none;
-    text-align: center;
+    text-align: center; /* Center the list items */
 }
 
 nav li {
@@ -32,6 +37,7 @@ nav li {
 
 section {
     padding: 20px;
+    text-align: center; /* Center the section content */
 }
 
 .product, .cart-item {

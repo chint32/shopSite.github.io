@@ -23,6 +23,10 @@ function getProductPrice(productId) {
 }
 
 function updateCartDisplay() {
+
+    const testElement = document.getElementById("test");
+    testElement.innerHTML = "<span>Something just like this…</span>";
+    
     const shoppingCart = document.getElementById('cart');
     const cartItems = shoppingCart.children[0];
     const cartTotalElement = shoppingCart.children[1];

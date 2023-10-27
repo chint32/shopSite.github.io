@@ -32,12 +32,13 @@ function getProductPrice(productId) {
     }
     return 0.00;
 }
+*/
 
 function updateCartDisplay() {
     const cartItems = document.getElementById('cart-items');
     const cartTotalElement = document.getElementById('cart-total');
 
     cartItems.innerHTML = "New Item!";
-    cartTotalElement.textContent = cartTotal.toFixed(2);
+    cartTotalElement.textContent = 10.toFixed(2);
 }
-*/
+

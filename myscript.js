@@ -32,7 +32,7 @@ function getProductPrice(productId) {
     }
     return 0.00;
 }
-*/
+
 
 function updateCartDisplay() {
     const cart = document.getElementById("cart");
@@ -42,4 +42,6 @@ function updateCartDisplay() {
     cartItems.innerHTML = "New Item!";
     cartTotalElement.textContent = 10.toFixed(2);
 }
+
+*/
 

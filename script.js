@@ -14,9 +14,9 @@ function addToCart(productId) {
 function getProductPrice(productId) {
     // In a real application, you'd fetch the product's price from a database.
     // For this example, we'll return static prices.
-    if (productId === 1) {
+    if (productId == 1) {
         return 10.00;
-    } else if (productId === 2) {
+    } else if (productId == 2) {
         return 15.00;
     }
     return 0.00;

@@ -1,6 +1,10 @@
 let cart = [];
 let cartTotal = 0;
 
+function hello(){
+    alert("Hello!");
+}
+
 function addToCart(productId) {
     // In a real application, you would need to implement product addition logic here.
     // For this example, we'll simply update the cart visually.

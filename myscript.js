@@ -35,8 +35,9 @@ function getProductPrice(productId) {
 */
 
 function updateCartDisplay() {
-    const cartItems = document.getElementById('cart-items');
-    const cartTotalElement = document.getElementById('cart-total');
+    const cart = document.getElementById("cart");
+    const cartItems = cart.children[0];
+    const cartTotalElement = cart.children[1];
 
     cartItems.innerHTML = "New Item!";
     cartTotalElement.textContent = 10.toFixed(2);

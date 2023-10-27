@@ -4,39 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <title>Products</title>
+    <script src="script.js"></script>
+    <title>My Website</title>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>My T-Shirt Store</h1>
-                <nav>
-                    <ul>
-                        <li><a href="index.html">Products</a></li>
-                        <li><a href="cart.html">Shopping Cart</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                    </ul>
-                </nav>
-        </header>
-        <section>
-            <h2>Available T-Shirts</h2>
-            <div class="product">
-                <img src="tshirt1.jpg" alt="T-Shirt 1">
-                <h3>T-Shirt 1</h3>
-                <p>Price: $10</p>
-                <button>Add to Cart</button>
-            </div>
-            <div class="product">
-                <img src="tshirt2.jpg" alt="T-Shirt 2">
-                <h3>T-Shirt 2</h3>
-                <p>Price: $12</p>
-                <button>Add to Cart</button>
-            </div>
-        <!-- Add more product items as needed -->        
-        </section>
-        <footer>
-            &copy; 2023 My T-Shirt Store
-        </footer>
-    </div>
+    <header>
+        <div class="title">
+            <h1>My Website</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#" id="products-link" class="active" onclick="showContent('products')">Products</a></li>
+                <li><a href="#" id="about-link" onclick="showContent('about')">About Us</a></li>
+                <li><a href="#" id="cart-link" onclick="showContent('cart')">Shopping Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div id="products" class="content">
+            <!-- Product grid goes here -->
+        </div>
+        <div id="about" class="content">
+            <!-- About Us content goes here -->
+        </div>
+        <div id="cart" class="content">
+            <!-- Shopping Cart content goes here -->
+        </div>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+            <a href="#"><img src="tiktok-icon.png" alt="TikTok"></a>
+        </div>
+    </footer>
 </body>
 </html>

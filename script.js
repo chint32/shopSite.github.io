@@ -23,13 +23,9 @@ function getProductPrice(productId) {
 }
 
 function updateCartDisplay() {
-
-    const testElement = document.getElementById("test");
-    testElement.innerHTML = "<span>Something just like this…</span>";
     
-    const shoppingCart = document.getElementById('cart');
-    const cartItems = shoppingCart.children[0];
-    const cartTotalElement = shoppingCart.children[1];
+    const cartItems = document.getElementById('cart-items');
+    const cartTotalElement = document.getElementById('cart-total');
     cartItems.innerHTML = cart.map(productId => <li>Product ${productId}</li>).join('');
     cartTotalElement.textContent = cartTotal.toFixed(2);
 }

@@ -1,44 +1,254 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <script src="script.js"></script>
-    <title>My Website</title>
+   <title> Products </title> 
+    <link rel="stylesheet" href="style.css">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {
+display: none;
+margin: 20px;
+}
+img {
+  vertical-align: middle;
+  border-radius: 5px 5px 0 0;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width:600px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  font-size: 15px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+  padding-right: 40px;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+
+
+.card {
+  background-color: #EEEEEE;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  width: 60%;
+  border-radius: 10px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+  justify-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+</style>
 </head>
+   </head>
 <body>
-    <header>
-        <div class="title">
-            <h1>My Website</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#" id="products-link" class="active" onclick="showContent('products')">Products</a></li>
-                <li><a href="#" id="about-link" onclick="showContent('about')">About Us</a></li>
-                <li><a href="#" id="cart-link" onclick="showContent('cart')">Shopping Cart</a></li>
-            </ul>
-        </nav>
-    </header>
+  <ul class="nav-links">
+    <li style="float:right"><a href="./cart.html">Shopping Cart</a></li>
+    <li style="float:right"><a href="./about.html">About Us</a></li>
+    <li style="float:left"><a href="./index.html">Products</a></li>
+    <li style="text-indent:10%">AstroChiicks</li>
+  </ul>
 
-    <main>
-        <div id="products" class="content">
-            <!-- Product grid goes here -->
-        </div>
-        <div id="about" class="content">
-            <!-- About Us content goes here -->
-        </div>
-        <div id="cart" class="content">
-            <!-- Shopping Cart content goes here -->
-        </div>
-    </main>
+<h2 style="text-align: center; padding-top: 20px;">Featured</h2>
 
-    <footer>
-        <div class="social-icons">
-            <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
-            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="#"><img src="tiktok-icon.png" alt="TikTok"></a>
-        </div>
-    </footer>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="shirt1.png" style="width:100%; height:600px; padding-bottom:50px;">
+  <div class="text">Shirt 1</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="shirt2.png" style="width:100%; height:600px; padding-bottom:50px;">
+  <div class="text">Shirt 2</div>
+</div>
+
+<div class="mySlides fade">
+  <img src="shirt3.png" style="width:100%; height:600px; padding-bottom:50px;">
+  <div class="text">Shirt 3</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">❮</a>
+<a class="next" onclick="plusSlides(1)">❯</a>
+
+</div>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+
+<h2 style="text-align: center; padding-top: 60px;">All Products</h2>
+
+<div class="grid-container">
+
+
+<div class="card">
+  <img src="shirt4.png" alt="Avatar" style="width:100%; padding:10px">
+  <div class="container">
+    <h4><b>Shirt 4</b></h4> 
+    <p>Pink</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="shirt5.png" alt="Avatar" style="width: 100%; padding:10px">
+  <div class="container">
+    <h4><b>Shirt 5</b></h4> 
+    <p>Yellow</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="shirt6.png" alt="Avatar" style="width: 100%; padding:10px">
+  <div class="container">
+    <h4><b>Shirt 6</b></h4> 
+    <p>Grey</p> 
+  </div>
+</div>
+
+
+<div class="card">
+  <img src="shirt1.png" alt="Avatar" style="width:100%; padding:10px">
+  <div class="container">
+    <h4><b>Shirt 1</b></h4> 
+    <p>Pink</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="shirt2.png" alt="Avatar" style="width: 100%; padding:10px">
+  <div class="container">
+    <h4><b>Shirt 2</b></h4> 
+    <p>Yellow</p> 
+  </div>
+</div>
+
+<div class="card">
+  <img src="shirt3.png" alt="Avatar" style="width: 100%; padding:10px">
+  <div class="container">
+    <h4><b>Shirt 3</b></h4> 
+    <p>Grey</p> 
+  </div>
+</div>
+
+</div>
+
 </body>
 </html>

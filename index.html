@@ -1,137 +1,120 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  
   <head>
     <meta charset="UTF-8">
     <title> Products </title> 
     <link rel="stylesheet" href="style.css">
     <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <style>
-
-
-    </style>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
   </head>
-</head>
-<body>
-  <ul class="nav-links">
-    <li style="float:right"><a href="./cart.html">Shopping Cart</a></li>
-    <li style="float:right"><a href="./about.html">About Us</a></li>
-    <li style="float:left"><a href="./index.html">Products</a></li>
-    <li style="text-indent:10%">AstroChiicks</li>
-  </ul>
-
-  <h2 style="text-align: center; padding-top: 20px;">Featured</h2>
-
-  <div class="slideshow-container">
-
-    <div class="mySlides fade">
-      <img src="shirt1.png" style="width:100%; height:600px; padding-bottom:50px;">
-      <div class="text">Shirt 1</div>
-    </div>
-
-    <div class="mySlides fade">
-      <img src="shirt2.png" style="width:100%; height:600px; padding-bottom:50px;">
-      <div class="text">Shirt 2</div>
-    </div>
-
-    <div class="mySlides fade">
-      <img src="shirt3.png" style="width:100%; height:600px; padding-bottom:50px;">
-      <div class="text">Shirt 3</div>
-    </div>
-
-    <a class="prev" onclick="plusSlides(-1)">❮</a>
-    <a class="next" onclick="plusSlides(1)">❯</a>
-
-  </div>
-
-
-  <div style="text-align:center">
-    <span class="dot" onclick="currentSlide(1)"></span> 
-    <span class="dot" onclick="currentSlide(2)"></span> 
-    <span class="dot" onclick="currentSlide(3)"></span> 
-  </div>
-
-  <script>
-    let slideIndex = 1;
-    showSlides(slideIndex);
-
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
-
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-      let i;
-      let slides = document.getElementsByClassName("mySlides");
-      let dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
-    }
-  </script>
-
-  <h2 style="text-align: center; padding-top: 60px;">All Products</h2>
-
-  <div class="grid-container">
-    <div class="card">
-      <img src="shirt4.png" alt="Avatar" style="width:100%; padding:10px">
-      <div class="container">
-        <h4><b>Shirt 4</b></h4> 
-        <p>Pink</p> 
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="shirt5.png" alt="Avatar" style="width: 100%; padding:10px">
-      <div class="container">
-        <h4><b>Shirt 5</b></h4> 
-        <p>Yellow</p> 
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="shirt6.png" alt="Avatar" style="width: 100%; padding:10px">
-      <div class="container">
-        <h4><b>Shirt 6</b></h4> 
-        <p>Grey</p> 
-      </div>
-    </div>
-
-
-    <div class="card">
-      <img src="shirt1.png" alt="Avatar" style="width:100%; padding:10px">
-      <div class="container">
-        <h4><b>Shirt 1</b></h4> 
-        <p>Pink</p> 
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="shirt2.png" alt="Avatar" style="width: 100%; padding:10px">
-      <div class="container">
-        <h4><b>Shirt 2</b></h4> 
-        <p>Yellow</p> 
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="shirt3.png" alt="Avatar" style="width: 100%; padding:10px">
-      <div class="container">
-        <h4><b>Shirt 3</b></h4> 
-        <p>Grey</p> 
-      </div>
-    </div>  
-  </div>
   
-</body>
+  <body>
+
+    <script src="myscript.js"></script>
+  
+    <!--                 Navigation links                -->
+
+    <ul class="nav-links">
+      <li style="float:right"><a href="./cart.html">Shopping Cart</a></li>
+      <li style="float:right"><a href="./about.html">About Us</a></li>
+      <li style="float:left"><a href="./index.html">Products</a></li>
+      <li style="text-indent:10%">AstroChiicks</li>
+    </ul>
+
+
+
+    <!--              Featured products slide show             -->
+
+    <h2 style="text-align: center; padding-top: 20px;">Featured</h2>
+    <div class="slideshow-container">
+  
+      <div class="mySlides fade">
+        <img src="shirt1.png" alt="shirt1" style="width:100%; height:600px; padding-bottom:50px;">
+        <div class="text">Shirt 1</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="shirt2.png" alt="shirt2" style="width:100%; height:600px; padding-bottom:50px;">
+        <div class="text">Shirt 2</div>
+      </div>
+
+      <div class="mySlides fade">
+        <img src="shirt3.png" alt="shirt3" style="width:100%; height:600px; padding-bottom:50px;">
+        <div class="text">Shirt 3</div>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+
+    </div>
+
+    <div style="text-align:center">
+      <span class="dot" onclick="currentSlide(1)"></span> 
+      <span class="dot" onclick="currentSlide(2)"></span> 
+      <span class="dot" onclick="currentSlide(3)"></span> 
+    </div>
+
+
+
+    <!--             Grid showing all products               -->
+
+    <h2 style="text-align: center; padding-top: 60px;">All Products</h2>
+
+    <div class="grid-container">
+      <div class="card">
+        <img src="shirt4.png" alt="Avatar" style="width:100%; padding:10px">
+        <div class="container">
+          <h4><b>Shirt 4</b></h4> 
+          <p>Pink</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="shirt5.png" alt="Avatar" style="width: 100%; padding:10px">
+        <div class="container">
+          <h4><b>Shirt 5</b></h4> 
+          <p>Yellow</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="shirt6.png" alt="Avatar" style="width: 100%; padding:10px">
+        <div class="container">
+          <h4><b>Shirt 6</b></h4> 
+          <p>Grey</p> 
+        </div>
+      </div>
+
+
+      <div class="card">
+        <img src="shirt1.png" alt="Avatar" style="width:100%; padding:10px">
+        <div class="container">
+          <h4><b>Shirt 1</b></h4> 
+          <p>Pink</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="shirt2.png" alt="Avatar" style="width: 100%; padding:10px">
+        <div class="container">
+          <h4><b>Shirt 2</b></h4> 
+          <p>Yellow</p> 
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="shirt3.png" alt="Avatar" style="width: 100%; padding:10px">
+        <div class="container">
+          <h4><b>Shirt 3</b></h4> 
+          <p>Grey</p> 
+        </div>
+      </div>
+  
+    </div>
+  <script type="text/javascript">
+    showSlides(1);
+  </script>
+  </body>
 </html>
